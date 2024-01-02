@@ -1,0 +1,23 @@
+<h2>Search by Filters</h2>
+
+<button (click)="byName()">Search By Name</button>
+<button (click)="byGender()">Search By Gender</button>
+<button (click)="byMaritalStatus()">Search By Marital Status</button>
+<button (click)="byCity()">Search By City</button>
+<button (click)="byAll()">Display All Employee Details</button>
+
+<div *ngIf="filter === 'name' ">
+  <app-search-by-name></app-search-by-name>
+</div>
+<div *ngIf="filter === 'gender' ">
+  <app-search-by-gender></app-search-by-gender>
+</div>
+<div *ngIf="filter === 'marital' ">
+  <app-search-by-marital-status></app-search-by-marital-status>
+</div>
+<div *ngIf="filter === 'city' ">
+  <app-search-by-city></app-search-by-city>
+</div>
+<div *ngIf="filter === 'full' ">
+  <app-search-fully></app-search-fully>
+</div>

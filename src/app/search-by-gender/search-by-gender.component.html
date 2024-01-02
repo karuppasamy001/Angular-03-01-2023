@@ -1,0 +1,11 @@
+<div>
+    Gender: <select [(ngModel)]="gender">
+        <option value="Male">male</option>
+        <option value="Female">Female</option>
+    </select>
+    <br>
+    <button (click)="searchByGender(gender)"> search</button>
+</div>
+<div>
+    <app-display></app-display>
+</div>

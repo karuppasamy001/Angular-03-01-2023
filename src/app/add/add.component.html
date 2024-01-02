@@ -1,0 +1,23 @@
+<h1>Add Employee</h1>
+
+<div>
+    id: <input type="number" [(ngModel)]="id"><br>
+    name: <input type="text" [(ngModel)]="name"><br>
+    city: <select [(ngModel)]="city">
+        <option value="Madurai">MADURAI</option>
+        <option value="Chennai">CHENNAI</option>
+        <option value="Bangalore">BANGALORE</option>
+    </select><br>
+    Marital Status :
+    Married <input type="radio" value="true" [(ngModel)]="maritalStatus">
+    Un-Married <input type="radio" value="false" [(ngModel)]="maritalStatus"> <br>
+    gender : <select [(ngModel)]="gender">
+        <option value="Male"> Male </option>
+        <option value="Female"> Female </option>
+    </select> <br>
+    AnnualIncome : <input type="number" [(ngModel)]="annualIncome">
+</div>
+
+<br><button (click)="addEmployee()"> submit </button>
+
+<h3>{{output}}</h3>

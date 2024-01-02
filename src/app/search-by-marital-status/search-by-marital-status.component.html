@@ -1,0 +1,10 @@
+<div>
+    Marital Status: <select [(ngModel)]="marital">
+        <option value="Married">Married</option>
+        <option value="Unmarried">Unmarried</option>
+    </select><br>
+    <button (click)="searchByMaritalStatus(marital)">search</button>
+</div>
+<div>
+    <app-display></app-display>
+</div>

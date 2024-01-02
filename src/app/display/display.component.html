@@ -1,0 +1,30 @@
+<style>
+    td, th{
+        border: 1px solid;
+    }
+    th{
+        background-color: rgb(228, 228, 228);
+    }
+</style>
+<div>
+    <table style="border: 1px solid;"> <!-- Display search results here -->
+        <caption> Employee Details </caption>
+        <tr >
+            <th style="border: 1px solid;">Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Marital Status</th>
+            <th>Annual Income</th>
+        </tr>
+        <tr *ngFor=" let i of empDetails.employeeArray ">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.gender}}</td>
+            <td *ngIf="i.maritalStatus">Married</td>
+            <td *ngIf="!i.maritalStatus">Un- Married</td>
+            <td>{{i.annualIncome}}</td>
+        </tr>
+    </table>
+</div>

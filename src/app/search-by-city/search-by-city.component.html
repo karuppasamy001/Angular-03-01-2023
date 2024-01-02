@@ -1,0 +1,16 @@
+<div>
+    City : <select [(ngModel)]="cityName">
+        <option value="Madurai">Madurai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <br>
+    <button (click)="searchByCity(cityName)">search</button>
+</div>
+<div>
+    <app-display></app-display>
+</div>
+
+
+
