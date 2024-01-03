@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Employee } from '../interface';
 import { EmployeeDetailsService } from '../employee-details.service';
 
 @Component({

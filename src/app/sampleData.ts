@@ -9,6 +9,11 @@ export const generateSampleData = (): { [key: number]: Employee } => {
     const randomCityIndex = Math.floor(Math.random() * cityNames.length);
     const randomCity = cityNames[randomCityIndex];
 
+    const startDate = new Date('1990-01-01').getTime();
+    const endDate = new Date('2001-12-31').getTime();
+    const randomTime = startDate + Math.random() * (endDate - startDate);
+    const randomDate = new Date(randomTime);
+
     const employee: Employee = {
       id: i,
       name: `Employee${i}`,
@@ -16,6 +21,7 @@ export const generateSampleData = (): { [key: number]: Employee } => {
       maritalStatus: i % 2 === 0, // Just alternating for variety
       gender: i % 2 === 0 ? 'Male' : 'Female',
       annualIncome: Math.floor(Math.random() * 100000) + 50000, // Random income between 50,000 and 150,000
+      dateOfBirth: randomDate
     };
 
     employeeDetails[i] = employee;

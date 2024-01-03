@@ -14,6 +14,7 @@ export class AddComponent {
   maritalStatus!: boolean;
   gender!: string;
   annualIncome!: number;
+  dateofbirth!: Date;
   output: string = ""
 
   constructor(public employeeDetails: EmployeeDetailsService) {
@@ -72,6 +73,7 @@ export class AddComponent {
       maritalStatus: Boolean(this.maritalStatus),
       gender: this.gender,
       annualIncome: this.annualIncome,
+      dateOfBirth: this.dateofbirth
     };
 
     this.employeeDetails.EmployeeDetails[this.id] = newEmp;

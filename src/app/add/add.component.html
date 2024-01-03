@@ -9,13 +9,14 @@
         <option value="Bangalore">BANGALORE</option>
     </select><br>
     Marital Status :
-    Married <input type="radio" value="true" [(ngModel)]="maritalStatus">
-    Un-Married <input type="radio" value="false" [(ngModel)]="maritalStatus"> <br>
+    Married <input type="radio" value="1" [(ngModel)]="maritalStatus">
+    Un-Married <input type="radio" value="0" [(ngModel)]="maritalStatus"> <br>
     gender : <select [(ngModel)]="gender">
         <option value="Male"> Male </option>
         <option value="Female"> Female </option>
     </select> <br>
-    AnnualIncome : <input type="number" [(ngModel)]="annualIncome">
+    AnnualIncome : <input type="number" [(ngModel)]="annualIncome"><br>
+    Date of Birth : <input type="date" [(ngModel)]="dateofbirth"> <br>
 </div>
 
 <br><button (click)="addEmployee()"> submit </button>

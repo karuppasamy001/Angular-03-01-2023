@@ -5,5 +5,6 @@ export interface Employee {
     maritalStatus: boolean
     gender: string
     annualIncome: number
+    dateOfBirth: Date
 }
 

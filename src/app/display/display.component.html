@@ -16,15 +16,17 @@
             <th>Gender</th>
             <th>Marital Status</th>
             <th>Annual Income</th>
+            <th>Date Of Birth</th>
         </tr>
         <tr *ngFor=" let i of empDetails.employeeArray ">
             <td>{{i.id}}</td>
-            <td>{{i.name}}</td>
-            <td>{{i.city}}</td>
-            <td>{{i.gender}}</td>
+            <td>{{i.name | titlecase}}</td>
+            <td>{{i.city | uppercase}}</td>
+            <td>{{i.gender | uppercase }}</td>
             <td *ngIf="i.maritalStatus">Married</td>
             <td *ngIf="!i.maritalStatus">Un- Married</td>
-            <td>{{i.annualIncome}}</td>
+            <td>{{i.annualIncome | currency : 'INR'}}</td>
+            <td>{{i.dateOfBirth | date }}</td>
         </tr>
     </table>
 </div>
